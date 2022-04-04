@@ -1,0 +1,77 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+
+
++anyhost
+# homepage
+GET     /                           controllers.HomeController.index()
+
+
+# user 
++anyhost
+GET 	/user		controllers.UserController.getAllUsers()
+
++anyhost
+GET 	/user/:id		controllers.UserController.getTheUser(id: Long)
+
++anyhost
+POST	/user		controllers.UserController.addTheUser()
+
++anyhost
+PUT	/user/:id		controllers.UserController.updateTheUser(id: Long)
+
++anyhost
+DELETE	/user/:id		controllers.UserController.deleteTheUser(id: Long)	
+
+
+
+
+
+
+
+
+# product 
++anyhost
+GET 	/product		controllers.ProductController.getAllProducts()
+
++anyhost
+GET 	/product/:id		controllers.ProductController.getTheProduct(id: Long)
+
++anyhost
+POST	/product		controllers.ProductController.addTheProduct()
+
++anyhost
+PUT	/product/:id		controllers.ProductController.updateTheProduct(id: Long)
+
++anyhost
+DELETE	/product/:id		controllers.ProductController.deleteTheProduct(id: Long)
+
+
+
+
+
+# category 
++anyhost
+GET 	/category		controllers.CategoryController.getAllCategories()
+
++anyhost
+GET 	/category/:id		controllers.CategoryController.getTheCategory(id: Long)
+
++anyhost
+POST	/category		controllers.CategoryController.addTheCategory()
+
++anyhost
+PUT	/category/:id		controllers.CategoryController.updateTheCategory(id: Long)
+
++anyhost
+DELETE	/category/:id		controllers.CategoryController.deleteTheCategory(id: Long)	
+
+
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
